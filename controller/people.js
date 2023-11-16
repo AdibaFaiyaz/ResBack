@@ -4,7 +4,8 @@ const people = express.Router();
 const mongoose = require("mongoose");
 
 people.post("/create-people",(req,res)=>{
-    peopleSchema.create(req.body,(err,data)=>{
+   const entry = req.body;
+    peopleSchema.create(entry,(err,data)=>{
         if(err)
             return err;
         
