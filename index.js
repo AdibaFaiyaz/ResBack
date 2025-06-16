@@ -18,7 +18,13 @@ db.on("error",()=>console.log("Error occured"))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(cors({
-    origin: ['http://localhost:3000', 'http://127.0.0.1:3000'],
+    origin: [
+        'http://localhost:3000', 
+        'http://127.0.0.1:3000',
+        'https://mern-team-project-5bzn1bwle-adibas-projects.vercel.app',
+        'https://mern-team-project-adibas-projects.vercel.app',
+        /\.vercel\.app$/
+    ],
     credentials: true
 }));
 
